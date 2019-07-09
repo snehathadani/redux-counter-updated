@@ -8,11 +8,25 @@ export const DECREMENT = 'DECREMENT';
 // responsible for handling any of the actual
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
-
+//under the hood it means dispatch(increment());
 export const increment = () => {
   // Fill in this function
+  return {
+    type:"INCREMENT",
+    payload:1
+  };
 };
 
 export const decrement = () => {
   // Fill in this function
+  return{
+    type:"DECREMENT",
+    payload:1
+  }
+};
+
+export const toggleIncrement= ()=> {
+  return {
+    type:"INCREMENT_TOGGLE"
+  };
 };
